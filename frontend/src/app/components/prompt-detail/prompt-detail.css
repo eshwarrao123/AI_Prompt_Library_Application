@@ -1,0 +1,77 @@
+.detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.back-link {
+    margin-bottom: 2rem;
+}
+
+.back-link a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+.prompt-header {
+    margin-bottom: 1.5rem;
+}
+
+.prompt-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.meta-badges {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.badge.complexity {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.badge.views {
+    background-color: #f1f8e9;
+    color: #388e3c;
+}
+
+.content-box {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    /* Preserves line breaks in the text */
+    color: #333;
+}
+
+.footer {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.error-msg {
+    color: #d32f2f;
+    background-color: #ffebee;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}

@@ -1,0 +1,14 @@
+<div class="list-container">
+    <h2>All Prompts</h2>
+
+    <div class="prompts-grid">
+        <div class="prompt-card" *ngFor="let prompt of prompts" [routerLink]="['/prompts', prompt.id]">
+            <div class="prompt-header">
+                <h3>{{ prompt.title }}</h3>
+                <span class="complexity-badge">Level {{ prompt.complexity }}</span>
+            </div>
+        </div>
+
+
+    </div>
+</div>

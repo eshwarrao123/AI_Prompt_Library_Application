@@ -1,0 +1,25 @@
+<div class="detail-container">
+    <div class="back-link">
+        <a routerLink="/prompts">← Back to Prompts</a>
+    </div>
+
+    <div *ngIf="error" class="error-msg">{{ error }}</div>
+
+    <ng-container *ngIf="prompt as p">
+        <div class="prompt-header">
+            <h2>{{ p.title }}</h2>
+            <div class="meta-badges">
+                <span class="badge complexity">Level {{ p.complexity }}</span>
+                <span class="badge views">👀 {{ p.view_count }} views</span>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <p>{{ p.content }}</p>
+        </div>
+
+        <div class="footer">
+            Created on: {{ p.created_at | date:'mediumDate' }}
+        </div>
+    </ng-container>
+</div>
