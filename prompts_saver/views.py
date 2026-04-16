@@ -1,13 +1,17 @@
 import json
+import os
 
 import redis
-from django.conf import settings
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
 from .models import Prompt
 
-redis_client = settings.redis_client
+_redis_url = os.environ.get('REDIS_URL')
+try:
+    redis_client = redis.from_url(_redis_url, decode_responses=True) if _redis_url else None
+except Exception:
+    redis_client = None
 
 @csrf_exempt
 def prompt_list(request):

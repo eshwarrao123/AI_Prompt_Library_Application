@@ -103,14 +103,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-# Redis — used for view counting. Falls back to None if the URL isn't set.
-import redis as _redis
-
-REDIS_URL = os.environ.get('REDIS_URL')
-if REDIS_URL:
-    try:
-        redis_client = _redis.from_url(REDIS_URL, decode_responses=True)
-    except Exception:
-        redis_client = None
-else:
-    redis_client = None
+# REDIS_URL is read directly in views.py via os.environ
