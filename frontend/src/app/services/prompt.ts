@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, isDevMode } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -16,7 +16,9 @@ export interface Prompt {
   providedIn: 'root',
 })
 export class PromptService {
-  private apiUrl = 'http://127.0.0.1:8000/api/prompts/';
+  private apiUrl = isDevMode()
+    ? 'http://127.0.0.1:8000/api/prompts/'
+    : 'https://ai-prompt-library-application-2.onrender.com/api/prompts/';
 
   constructor(private http: HttpClient) { }
 
