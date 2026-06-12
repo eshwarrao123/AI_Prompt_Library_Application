@@ -23,7 +23,7 @@ export class PromptList implements OnInit {
       next: (data) => {
         console.log('API Response data:', data);
         this.prompts = data;
-        this.cdr.detectChanges(); // Forces Angular to render the data
+        this.cdr.detectChanges(); 
       },
       error: (err: any) => console.error('Failed to fetch prompts', err)
     });
