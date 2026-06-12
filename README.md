@@ -16,7 +16,7 @@ A modern, full-stack application designed to save, manage, and track AI prompts.
 - **Cache:** Redis 7 
 - **Deployment:** Docker & Docker Compose
 
-## 📡 API Endpoints
+##  API Endpoints
 | Method | Endpoint | Description |
 |---|---|---|
 | `GET` | `/api/prompts/` | Retrieve a list of all saved prompts. |
