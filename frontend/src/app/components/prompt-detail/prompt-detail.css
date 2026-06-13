@@ -58,6 +58,7 @@
     border: 1px solid #e0e0e0;
     line-height: 1.6;
     white-space: pre-wrap;
+    /* Preserves line breaks in the text */
     color: #333;
 }
 
